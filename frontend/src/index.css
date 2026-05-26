@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0F1117;
+  color: #E2E8F0;
+  font-family: 'DM Sans', sans-serif;
+  margin: 0;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0F1117;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A2D35;
+  border-radius: 3px;
+}
+
+@layer components {
+  /* Card styles */
+  .card {
+    @apply bg-[#1C1F26] border border-[#2A2D35] rounded-2xl;
+  }
+
+  /* Primary button */
+  .btn-primary {
+    @apply bg-[#4F8EF7] hover:bg-[#3a7be0] text-white font-medium px-4 py-2 rounded-xl transition-all duration-200;
+  }
+
+  /* Input field */
+  .input-field {
+    @apply bg-[#16181D] border border-[#2A2D35] text-[#E2E8F0] rounded-xl px-4 py-2.5 w-full focus:outline-none focus:border-[#4F8EF7] placeholder-[#64748B] text-sm;
+  }
+}
+
+/* Light mode styles */
+
+html:not(.dark) body,
+html:not(.dark) #root,
+html:not(.dark) main,
+html:not(.dark) .bg-midnight {
+  background-color: #F1F5F9 !important;
+  color: #1E293B !important;
+}
+
+/* Light mode scrollbar */
+html:not(.dark) ::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+html:not(.dark) ::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+}
+
+/* Light mode cards */
+html:not(.dark) .card {
+  background-color: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+}
+
+/* Light mode inputs */
+html:not(.dark) .input-field {
+  background-color: #F8FAFC !important;
+  border-color: #E2E8F0 !important;
+  color: #1E293B !important;
+}
+
+/* Light mode buttons */
+html:not(.dark) .btn-primary {
+  background-color: #4F8EF7 !important;
+  color: #FFFFFF !important;
+}
+
+/* Light mode sidebar */
+html:not(.dark) aside {
+  background-color: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+}
+
+/* Light mode text colors */
+html:not(.dark) .text-\[\#E2E8F0\] {
+  color: #1E293B !important;
+}
+
+html:not(.dark) .text-\[\#64748B\] {
+  color: #64748B !important;
+}
+
+html:not(.dark) .text-\[\#94A3B8\] {
+  color: #94A3B8 !important;
+}
+
+html:not(.dark) .text-lavender {
+  color: #1E293B !important;
+}
+
+html:not(.dark) .text-steel {
+  color: #64748B !important;
+}
+
+/* Light mode backgrounds */
+html:not(.dark) .bg-\[\#16181D\] {
+  background-color: #F8FAFC !important;
+}
+
+html:not(.dark) .bg-\[\#1C1F26\] {
+  background-color: #F1F5F9 !important;
+}
+
+html:not(.dark) .bg-\[\#2C1320\] {
+  background-color: #F8FAFC !important;
+}
+
+html:not(.dark) .bg-\[\#241020\] {
+  background-color: #F1F5F9 !important;
+}
+
+html:not(.dark) .bg-\[\#3a2030\] {
+  background-color: #F1F5F9 !important;
+}
+
+/* Light mode borders */
+html:not(.dark) .border-\[\#2A2D35\] {
+  border-color: #E2E8F0 !important;
+}
+
+html:not(.dark) .border-\[\#4a3850\] {
+  border-color: #E2E8F0 !important;
+}
+
+/* Light mode hover states */
+html:not(.dark) .hover\:bg-\[\#16181D\]:hover {
+  background-color: #F1F5F9 !important;
+}
+
+html:not(.dark) .hover\:bg-\[\#1C1F26\]:hover {
+  background-color: #F1F5F9 !important;
+}
+
+html:not(.dark) .hover\:bg-\[\#3a2030\]:hover {
+  background-color: #F1F5F9 !important;
+}
+
+/* Light mode delete button hover */
+html:not(.dark) .hover\:bg-rose-500\/20:hover {
+  background-color: #FEE2E2 !important;
+}
+
+/* Light mode select dropdown */
+html:not(.dark) select,
+html:not(.dark) select option {
+  background-color: #F8FAFC !important;
+  color: #1E293B !important;
+}
+
+/* Light mode mobile top bar */
+html:not(.dark) .lg\:hidden.fixed.top-0 {
+  background-color: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+}
+
+/* Light mode progress bars */
+html:not(.dark) .bg-\[\#16181D\].rounded-full {
+  background-color: #E2E8F0 !important;
+}
+
+/* Light mode icon containers */
+html:not(.dark) .rounded-xl.bg-\[\#16181D\] {
+  background-color: #F1F5F9 !important;
+}
+
+/* Light mode modal cards */
+html:not(.dark) .backdrop-blur-sm .card {
+  background-color: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+}
+
+/* Light mode tooltip */
+html:not(.dark) .bg-\[\#16181D\].border.border-\[\#2A2D35\].rounded-xl {
+  background-color: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+  color: #1E293B !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Light mode AI tip box */
+html:not(.dark) .bg-\[\#16181D\].rounded-xl {
+  background-color: #F8FAFC !important;
+}

@@ -1,0 +1,64 @@
+# =========================
+# Dependencies
+# =========================
+node_modules/
+
+# =========================
+# Build Files
+# =========================
+dist/
+build/
+coverage/
+
+# =========================
+# Environment Variables
+# =========================
+.env
+.env.*
+
+# Keep example env files
+!.env.example
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+# Cache Files
+# =========================
+.cache/
+.parcel-cache/
+.vite/
+
+# =========================
+# OS Files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# IDE / Editor Files
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+# Runtime Files
+# =========================
+*.pid
+*.seed
+*.pid.lock
+
+# =========================
+# Deployment
+# =========================
+.vercel/
+.render/
