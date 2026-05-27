@@ -273,9 +273,7 @@ export default function Dashboard() {
           <div className="space-y-3">
             {sortedCategories.map(([cat, amt]) => {
               const pct =
-                totalExpense > 0
-                  ? Math.round((amt / totalExpense) * 100)
-                  : 0;
+                totalExpense > 0 ? Math.round((amt / totalExpense) * 100) : 0;
 
               const color = CATEGORY_COLORS[cat] || "#94A3B8";
 
@@ -494,9 +492,7 @@ export default function Dashboard() {
 
             <p
               className={`font-semibold font-display ${
-                totalBalance >= 0
-                  ? "text-emerald-400"
-                  : "text-rose-400"
+                totalBalance >= 0 ? "text-emerald-400" : "text-rose-400"
               }`}
             >
               ₹{totalBalance.toLocaleString()}
@@ -517,7 +513,7 @@ export default function Dashboard() {
             {(data?.recentTransactions || []).slice(0, 6).map((txn, i) => (
               <div
                 key={i}
-                className="flex items-center justify-between py-2.5 border-b border-[#2A2D35] last:border-0"
+                className="flex items-center justify-between py-2.5 border-b border-[#2A2D35] last:border-0 hover:bg-[#16181D] transition-colors rounded-xl px-2 -mx-2"
               >
                 <div className="flex items-center gap-3">
                   <div className="w-9 h-9 rounded-xl bg-[#16181D] flex items-center justify-center text-base">
@@ -540,9 +536,7 @@ export default function Dashboard() {
 
                 <span
                   className={`text-sm font-semibold ${
-                    txn.type === "Income"
-                      ? "text-emerald-400"
-                      : "text-rose-400"
+                    txn.type === "Income" ? "text-emerald-400" : "text-rose-400"
                   }`}
                 >
                   {txn.type === "Income" ? "+" : "-"}₹
@@ -572,9 +566,7 @@ export default function Dashboard() {
               ₹{totalIncome.toLocaleString()}
             </p>
 
-            <p className="text-xs text-[#64748B] mt-1">
-              Total income all time
-            </p>
+            <p className="text-xs text-[#64748B] mt-1">Total income all time</p>
           </div>
 
           <div className="space-y-1">
@@ -583,7 +575,7 @@ export default function Dashboard() {
               .map((inc, i) => (
                 <div
                   key={i}
-                  className="flex items-center justify-between py-2.5 border-b border-[#2A2D35] last:border-0"
+                  className="flex items-center justify-between py-2.5 border-b border-[#2A2D35] last:border-0 hover:bg-[#16181D] transition-colors rounded-xl px-2 -mx-2"
                 >
                   <div className="flex items-center gap-3">
                     <div className="w-9 h-9 rounded-xl bg-[#16181D] flex items-center justify-center text-base">
