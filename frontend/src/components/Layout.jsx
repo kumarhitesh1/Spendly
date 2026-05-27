@@ -6,7 +6,7 @@ export default function Layout({ children }) {
       <Sidebar />
 
       {/* Main content area */}
-      <main className="flex-1 lg:ml-64 pt-14 lg:pt-0 p-4 lg:p-8 overflow-y-auto">
+      <main className="flex-1 lg:ml-64 pt-16 lg:pt-4 p-4 lg:p-8 overflow-y-auto">
         {children}
       </main>
     </div>
