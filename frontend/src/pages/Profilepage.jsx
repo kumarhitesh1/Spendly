@@ -189,13 +189,13 @@ export default function ProfilePage() {
 
       {/* Status messages */}
       {successMsg && (
-        <div className="bg-emerald-900/30 border border-emerald-700/50 text-emerald-300 text-sm px-4 py-3 rounded-xl">
-          ✓ {successMsg}
-        </div>
+        <div className="bg-emerald-500/15 border border-emerald-500/40 text-emerald-600 dark:text-emerald-300 text-sm px-4 py-3 rounded-xl font-medium">
+  ✓ {successMsg}
+</div>
       )}
 
       {errorMsg && (
-        <div className="bg-red-900/30 border border-red-700/50 text-red-300 text-sm px-4 py-3 rounded-xl">
+        <div className="bg-red-500/15 border border-red-500/40 text-red-600 dark:text-red-300 text-sm px-4 py-3 rounded-xl font-medium">
           {errorMsg}
         </div>
       )}
@@ -354,9 +354,9 @@ export default function ProfilePage() {
 
         {/* Password status messages */}
         {passSuccess && (
-          <div className="bg-emerald-900/30 border border-emerald-700/50 text-emerald-300 text-sm px-4 py-3 rounded-xl mb-4">
-            ✓ {passSuccess}
-          </div>
+          <div className="bg-emerald-500/15 border border-emerald-500/40 text-emerald-600 dark:text-emerald-300 text-sm px-4 py-3 rounded-xl mb-4 font-medium">
+  ✓ {passSuccess}
+</div>
         )}
 
         {passError && (
